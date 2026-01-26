@@ -1,5 +1,7 @@
 # DOGG_OS v1.0
 
+🌐 **Live Demo:** [DOGG_OS Portfolio](https://waleee7.github.io/dogg-os-portfolio/)
+
 A web-based interactive portfolio designed to mimic a fully functional operating system. Perfect for showcasing skills, projects, and experience in a playful, immersive way.
 
 🚀 Features
@@ -36,10 +38,7 @@ CSS3 (animations, layouts, transitions)
 
 Vanilla JavaScript (dynamic interactions & modal logic)
 
-🌐 Live Demo: DOGG_OS Portfolio
 
-👉 DOGG_OS Portfolio
-
-📌 Purpose
+## 📌 Purpose
 
 DOGG_OS was created to demonstrate front-end engineering skills, UI/UX creativity, and production-ready web design in a fun, interactive, and memorable way. The OS-style portfolio allows users to explore skills and projects in an engaging, immersive environment.
