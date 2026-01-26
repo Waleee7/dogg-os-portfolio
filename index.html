@@ -1378,10 +1378,13 @@
             </div>
             <div class="window-content">
                 <div class="carousel-container">
-                    <img src="assets/Championship_results.jpeg" alt="2025 PBC Championship - 1st Place Discus 49.07m" class="carousel-image active" id="img0" 
-                    <img src="assets/pbc_champion.jpeg" alt="Peach Belt Conference Champion" class="carousel-image" id="img1" 
-                    <img src="assets/outstanding_athlete.jpeg" alt="Outstanding Field Athlete Award" class="carousel-image" id="img2"
-                    <img src="assets/training_rain.jpeg" alt="Training in the rain" class="carousel-image" id="img3"
+                    <img src="assets/Championship_results.jpeg" alt="2025 PBC Championship - 1st Place Discus 49.07m" class="carousel-image active" id="img0">
+                    <img src="assets/pbc_champion.jpg.jpeg" alt="Peach Belt Conference Champion" class="carousel-image" id="img1">
+                    <img src="assets/outstanding_athlete.png.jpeg" alt="Outstanding Field Athlete Award" class="carousel-image" id="img2">
+                    <img src="assets/training_rain.jpeg" alt="Training in the rain" class="carousel-image" id="img3">
+
+                    <button id="prevBtn">Prev</button>
+                    <button id="nextBtn">Next</button>
                     
                     <div class="carousel-counter" id="carouselCounter">1 / 4</div>
                     <div class="carousel-caption" id="carouselCaption">2025 PBC Championship - 1st Place Discus 49.07m</div>
@@ -1389,7 +1392,7 @@
                 
                 <div class="carousel-controls">
                     <button class="carousel-btn" onclick="previousImage()" id="prevBtn">← Previous</button>
-                    <button class="carousel-btn" onclick="nextImage()" id="nextBtn">Next →</button>
+                    <button class="carousel-btn" onclick="nextImage()" id="nextBtn">Next →yes</button>
                 </div>
                 
                 <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 136, 255, 0.1); border: 1px solid var(--secondary); border-radius: 8px;">
@@ -1786,6 +1789,27 @@
   } else {
     installHandlers();
   }
+     let current = 0;
+  const images = document.querySelectorAll('.carousel-image');
+
+  function showImage(index) {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+  }
+
+  function showNext() {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }
+
+  function showPrev() {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  }
+
+  // Attach buttons
+  document.getElementById('nextBtn').addEventListener('click', showNext);
+  document.getElementById('prevBtn').addEventListener('click', showPrev);
 })();       
     </script>
 </body>
